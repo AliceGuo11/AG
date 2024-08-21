@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice (Xiaojing) Guo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            background-color: #007BFF;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #0056b3;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about" class="tab-link" onclick="showTab('about')">About Me</a>
+        <a href="#background" class="tab-link" onclick="showTab('background')">Professional Background</a>
+        <a href="#projects" class="tab-link" onclick="showTab('projects')">Projects</a>
+        <a href="#gallery" class="tab-link" onclick="showTab('gallery')">Gallery</a>
+        <a href="#contact" class="tab-link" onclick="showTab('contact')">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div id="about" class="tab-content active">
+            <h1>About Me</h1>
+            <p>Welcome to my personal webpage! My name is Alice (Xiaojing) Guo...</p>
+        </div>
+
+        <div id="background" class="tab-content">
+            <h1>Professional Background</h1>
+            <p>Here’s some information about my professional background...</p>
+        </div>
+
+        <div id="projects" class="tab-content">
+            <h1>Projects</h1>
+            <p>Here’s a list of projects I’ve worked on...</p>
+        </div>
+
+        <div id="gallery" class="tab-content">
+            <h1>Gallery</h1>
+            <p>Here are some images from my professional life and personal hobbies...</p>
+            <img src="https://via.placeholder.com/600x400" alt="Sample Image">
+        </div>
+
+        <div id="contact" class="tab-content">
+            <h1>Contact</h1>
+            <p>You can reach me at <a href="mailto:gxjdameinv@gmail.com">gxjdameinv@gmail.com</a>.</p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
